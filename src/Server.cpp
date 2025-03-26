@@ -102,9 +102,9 @@ Server::Server(const std::string &bind_ip, const std::uint_fast16_t tcp_port,
 
   // reduce lib60870-C connection timeout down to 2s
   auto param = CS104_Slave_getConnectionParameters(slave);
-  param->t0 = 2; // socket connect timeout
-  param->t1 = 2; // acknowledgement timeout
-  param->t2 = 1; // acknowledgement interval
+  // param->t0 = 2; // socket connect timeout
+  // param->t1 = 2; // acknowledgement timeout
+  // param->t2 = 1; // acknowledgement interval
 
   // Function pointers for custom handler functions
   void *key = static_cast<void *>(this);

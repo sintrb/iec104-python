@@ -66,9 +66,9 @@ Connection::Connection(
 
   // reduce lib60870-C connection timeout down to 2s
   auto param = CS104_Connection_getAPCIParameters(connection);
-  param->t0 = 2; // socket connect timeout
-  param->t1 = 2; // acknowledgement timeout
-  param->t2 = 1; // acknowledgement interval
+  // param->t0 = 2; // socket connect timeout
+  // param->t1 = 2; // acknowledgement timeout
+  // param->t2 = 1; // acknowledgement interval
 
   if (originator_address > 0) {
     setOriginatorAddress(originator_address);
